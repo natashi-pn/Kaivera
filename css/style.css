@@ -300,7 +300,7 @@ html,body{
   left: 50%;
   width: 100vw;
   transform: translate(-50%, -50%);
-  height: 4vh;
+  height: 5vh;
   background: var(--gray);
 }
 

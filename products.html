@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Kaivera Product</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/69e1242b61.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body style="background: #121212" data-page="product">
+
+  <!--Transition -->
+  <div class="inTransition"></div>
+  <div class="outTransition"></div>
+
+  <!-- Help Bubble -->
+  <div class="help-bubble"></div>
+
+  <!-- Navigation -->
+  <section class="navigation-btn">
+    <div class="nav-logo">
+      <img src="assets/images/kaivera logo.png" alt="" />
+    </div>
+    <div class="nav-menu">
+      <div class="nav-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </section>
+
+  <section class="navigation">
+    <div class="navigation_container">
+    <div class="left">
+      <ul>
+        <li>
+          <div class="invert"></div>
+          <a href="home.html" class="nav-link transition-link navigation_links">HOME</a>
+        </li>
+        <li>
+          <a href="products.html" class="nav-link  transition-link navigation_links">PRODUCTS</a>
+        </li>
+        <li>
+          <a href="cart.html" class="nav-link  transition-link navigation_links">CART</a>
+        </li>
+        <li>
+          <a href="contact.html" class="nav-link  transition-link navigation_links">CONTACT</a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-link  transition-link navigation_links">ABOUT</a>
+        </li>
+        <li>
+          <a href="signup.html" class="nav-link  transition-link navigation_links">SIGNUP</a>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="bot">
+        <h1>01</h1>
+      </div>
+    </div>
+    </div>
+
+  <section class="navigation_bottom">
+   
+      <div class="icon help-target" data-help="Our Partner">
+        <a href="#"><i class="fa-brands fa-pied-piper"></i></a>
+      </div>
+      <div class="social_links help-target" data-help="Social Links">
+          <a href="#">Instagram<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">facebook<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">linkedin<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">x<i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+
+      <div class="profile">
+          <a href="#">View Profile</a>
+          <a href="#">Wish List</a>
+      </div>
+ 
+    </section>
+  </section>
+  
+
+
+  <!-- Navigation ends -->
+
+
+  <!-- Header Section -->
+  <section class="header">
+    <div class="background-video">
+      <video src="assets/videos/Gradientsection.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="header-content">
+      <div class="header-links">
+        <a href="index.html" class="transition-link">Home</a>
+        <span>.</span>
+        <a href="products.html" class="transition-link">Products</a>
+      </div>
+      <div class="title">
+        <div class="text-wrapper">
+          <h1 class="introLineAnimation">
+            Elevated Essentials, Designed to Endure
+          </h1>
+        </div>
+      </div>
+      <div class="desc">
+        <div class="para-wrapper">
+          <p class="introLineAnimation">
+            Step into the world of Kaivera where every sneaker, fragrance, and
+            bag is crafted with intention. Rooted in nature, refined for the
+            modern explorer. Discover pieces that speak in silence
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+
+  <section class="product-section">
+    <div class="product-header">
+      <h1 class="introLineAnimation">Essence of Kaivera</h1>
+      <p class="linesAnimation">
+        Discover our signature designer sneakers where tropical soul meets
+        timeless luxury.
+      </p>
+    </div>
+
+    <div class="product-nav">
+      <button class="active" onclick="goToSlide(0)">Dresses</button>
+      <button onclick="goToSlide(1)">Shirts</button>
+      <button onclick="goToSlide(2)">Shoes</button>
+      <button onclick="goToSlide(3)">Perfumes</button>
+    </div>
+
+    <div class="slider" id="slider">
+      <!-- Dresses Slide -->
+      <section class="slide">
+        <div class="product-container">
+          <div class="product">
+            <div class="product-image">
+              <h1>$430</h1>
+              <img src="assets/products/dress1.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Kaivera Rainbow</h1>
+                <h1>
+                  A soft, flowing dress that blends pastels like a sunset on
+                  tropical waves.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$390</h1>
+              <img src="assets/products/dress2.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Trophical Bloom</h1>
+                <h1>
+                  Lush floral elegance wrapped in vivid greens and bold
+                  blooms, like a jungle in full bloom.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$460</h1>
+              <img src="assets/products/dress3.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Moonlight Mevan</h1>
+                <h1>
+                  A shimmering satin dress that captures the calm glow of the
+                  moon over ocean waters.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$480</h1>
+              <img src="assets/products/dress4.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Kaivera Fire</h1>
+                <h1>
+                  Fierce and bold, this scarlet masterpiece ignites confidence
+                  and timeless beauty.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$420</h1>
+              <img src="assets/products/dress5.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Kaivera Midnight Wrap</h1>
+                <h1>
+                  A deep black silk wrap dress that flows like midnight
+                  shadows in motion.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$400</h1>
+              <img src="assets/products/dress6.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Purple Vera</h1>
+                <h1>
+                  Lavender meets lilac in this sleek, body-hugging silhouette
+                  designed for evening radiance.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$470</h1>
+              <img src="assets/products/dress7.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Bloodhound</h1>
+                <h1>
+                  A daring red dress with a sculpted fit, echoing untamed
+                  energy and allure.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$490</h1>
+              <img src="assets/products/dress8.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Bloody Kaivera</h1>
+                <h1>
+                  Vibrant crimson elegance with structured shoulder rebellion
+                  meets royalty.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$410</h1>
+              <img src="assets/products/dress9.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Bluish Heaven</h1>
+                <h1>
+                  Sky blue tones and soft chiffon layers bring serene charm to
+                  every step.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$445</h1>
+              <img src="assets/products/dress10.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Tradition Era</h1>
+                <h1>
+                  Classic cream with golden thread details a homage to
+                  timeless femininity.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$490</h1>
+              <img src="assets/products/dress11.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Silver Fang</h1>
+                <h1>
+                  Silvery silk with a sharp neckline and edgy structure, for
+                  the bold elite.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shirt Slide -->
+      <section class="slide">
+        <div class="product-container">
+          <div class="product">
+            <div class="product-image">
+              <h1>$210</h1>
+              <img src="assets/products/shirt1.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Bluish Shirt Pair</h1>
+                <h1>
+                  A clean-cut pair in icy blue tones, perfect for coastal
+                  evenings.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$225</h1>
+              <img src="assets/products/shirt2.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Deep Blue Tie Shirt</h1>
+                <h1>
+                  Ocean-deep navy with a smart tie detail, exuding polished
+                  charm.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$190</h1>
+              <img src="assets/products/shirt3.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Deep Blue Sweat</h1>
+                <h1>
+                  Luxury loungewear in rich sapphire, elevated with tailored
+                  precision.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$240</h1>
+              <img src="assets/products/shirt4.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Golden White Sweat</h1>
+                <h1>
+                  Off-white with golden shimmer accents where comfort meets
+                  opulence.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$230</h1>
+              <img src="assets/products/shirt5.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Vanilla Cardigan</h1>
+                <h1>
+                  Soft vanilla hues with minimal cuts and luxurious texture.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$215</h1>
+              <img src="assets/products/shirt6.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Bluish Men Shirt</h1>
+                <h1>
+                  Classic blue dress shirt with refined collar work and
+                  tropical minimalism.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$200</h1>
+              <img src="assets/products/shirt7.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Pale Black Shirt</h1>
+                <h1>
+                  Subtle charcoal hue with matte finish—understated and
+                  powerful.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$220</h1>
+              <img src="assets/products/shirt8.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Black Shirt</h1>
+                <h1>
+                  Tailored pitch-black essential with modern stitching and
+                  fit.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$195</h1>
+              <img src="assets/products/shirt9.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Green Sweat Shirt</h1>
+                <h1>
+                  Earthy tones in soft luxury cotton perfect for island
+                  evenings.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$200</h1>
+              <img src="assets/products/shirt10.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Light Blue Sweat Vera</h1>
+                <h1>
+                  A breezy blue sweatshirt with a Kaivera embossed logo
+                  quietly luxurious.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$235</h1>
+              <img src="assets/products/shirt11.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Silver Night Shirt</h1>
+                <h1>
+                  Midnight silver tone with a smooth touch, designed for
+                  upscale nights.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shoes Slide -->
+
+      <section class="slide">
+        <div class="product-container">
+          <div class="product">
+            <div class="product-image">
+              <h1>$510</h1>
+              <img src="assets/products/shoe1.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Brown Leather Shoes</h1>
+                <h1>
+                  Premium chocolate-brown leather crafted for timeless comfort
+                  and elegance.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$530</h1>
+              <img src="assets/products/shoe2.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Cyber Vera</h1>
+                <h1>
+                  Futuristic silhouette with sharp black and teal accents
+                  urban, luxe, bold.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$520</h1>
+              <img src="assets/products/shoe3.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Kaivera Drift Noir</h1>
+                <h1>
+                  Sleek matte black sneaker with wave-pattern embossing fast
+                  meets fashion.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$500</h1>
+              <img src="assets/products/shoe4.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Drift Coral Bloom</h1>
+                <h1>
+                  A deep sea-inspired blend of black leather and coral red
+                  highlights.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$550</h1>
+              <img src="assets/products/shoe5.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Silver Red Sneakers</h1>
+                <h1>
+                  Polished silver base with vibrant red streaks a bold runway
+                  sneaker.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$480</h1>
+              <img src="assets/products/shoe6.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Neon Blue Sneakers</h1>
+                <h1>
+                  Electric blue with reflective finish tropical energy
+                  underfoot.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$490</h1>
+              <img src="assets/products/shoe7.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Sport Vera Shoes</h1>
+                <h1>
+                  Luxury meets performance in this refined black-and-green
+                  athletic pair.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$465</h1>
+              <img src="assets/products/shoe8.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Black and White Pair</h1>
+                <h1>
+                  Contrasting classic tones, tailored for minimalists who
+                  demand luxury.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$510</h1>
+              <img src="assets/products/shoe9.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Kaivera Sprint</h1>
+                <h1>
+                  Lightweight and agile, this tropical mesh sneaker is made
+                  for pace and grace.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Perfumes Slide -->
+      <section class="slide">
+        <div class="product-container">
+          <div class="product">
+            <div class="product-image">
+              <h1>$260</h1>
+              <img src="assets/products/perfume1.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Kaivera Sol Mist</h1>
+                <h1>
+                  A radiant citrus bloom with hints of white musk, bottled
+                  sunshine.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$275</h1>
+              <img src="assets/products/perfume2.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Noire Bloom</h1>
+                <h1>
+                  Velvety rose and night jasmine blend for a deeply sensual
+                  allure.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$250</h1>
+              <img src="assets/products/perfume3.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Verde Aura</h1>
+                <h1>
+                  Green fig and neroli wrapped in a fresh, airy elegance.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$285</h1>
+              <img src="assets/products/perfume4.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Dusk Essence</h1>
+                <h1>
+                  Amber and sandalwood base notes meet soft florals
+                  sophistication at twilight.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$270</h1>
+              <img src="assets/products/perfume5.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Kaivera Men Essence</h1>
+                <h1>
+                  Masculine yet smooth, with bergamot, cedar, and a touch of
+                  patchouli.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$255</h1>
+              <img src="assets/products/perfume6.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Kaivera Ice</h1>
+                <h1>
+                  Clean, frosted mint and alpine woods a sharp, invigorating
+                  scent.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$265</h1>
+              <img src="assets/products/perfume7.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Cold Vertex</h1>
+                <h1>
+                  A daring mix of cool ozone and sea breeze with icy florals.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product-image">
+              <h1>$275</h1>
+              <img src="assets/products/perfume8.webp" alt="" />
+            </div>
+            <div class="product-content">
+              <div class="product-desc">
+                <h1>Orange Essence Era</h1>
+                <h1>
+                  Bright orange blossom, neroli, and light musk a timeless
+                  citrus escape.
+                </h1>
+              </div>
+              <button>Buy</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-12 px-8 tracking-wide">
+    <div class="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-5 lg:gap-14 max-lg:gap-8">
+      <div class="lg:col-span-2 max-w-md">
+        <h4 class="text-6xl font-semibold mb-6 text-slate-800 footer-title">
+          Stay Grounded. Move Boldly
+        </h4>
+        <p class="text-slate-600 text-base">
+          Inspired by nature. Crafted for the confident. Join the Kaivera
+          journey.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-4xl font-semibold mb-6 text-slate-800 footer-title">
+          Services
+        </h4>
+        <ul class="space-y-4">
+          <li>
+            <h1 class="text-slate-600 hover:text-slate-800 text-base">
+              Clothing
+            </h1>
+          </li>
+          <li>
+            <h1 href="#" class="text-slate-600 hover:text-slate-800 text-base">
+              Delivery
+            </h1>
+          </li>
+          <li>
+            <h1 href="#" class="text-slate-600 hover:text-slate-800 text-base">
+              Luxury Design
+            </h1>
+          </li>
+          <li>
+            <h1 href="#" class="text-slate-600 hover:text-slate-800 text-base">
+              High Quality
+            </h1>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-4xl font-semibold mb-6 text-slate-800 footer-title">
+          Check Our Pages
+        </h4>
+        <ul class="space-y-4">
+          <li>
+            <a href="index.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">Home</a>
+          </li>
+          <li>
+            <a href="products.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">Products</a>
+          </li>
+          <li>
+            <a href="cart.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">Cart</a>
+          </li>
+          <li>
+            <a href="contact.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">Contact</a>
+          </li>
+          <li>
+            <a href="about.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">About</a>
+          </li>
+          <li>
+            <a href="signup.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">SignUp</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-4xl font-semibold mb-6 text-slate-800 footer-title">
+          Keywords
+        </h4>
+        <ul class="space-y-4">
+          <li>
+            <a href="javascript:void(0)" class="text-slate-600 hover:text-slate-800 text-base">Branded</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-slate-600 hover:text-slate-800 text-base">Mission and Values</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-slate-600 hover:text-slate-800 text-base">Passion</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-slate-600 hover:text-slate-800 text-base">Sophisticated</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+    integrity="sha512-wOeEC+9qERAzhliwBFPDb6t8TiFFxdxG8vhK/Ygs7TuC44bpg8pg/X2/U/u+0X4fK05wb9id1EIipnF02+CFQw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

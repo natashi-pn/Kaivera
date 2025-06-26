@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Kaivera SignUp</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://kit.fontawesome.com/69e1242b61.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body data-page="signup">
+
+    <!--Transition Overlays-->
+    <div class="inTransition"></div>
+    <div class="outTransition"></div>
+
+    <!-- Help Bubble -->
+    <div class="help-bubble"></div>
+
+   <!-- Navigation -->
+  <section class="navigation-btn">
+    <div class="nav-logo">
+      <img src="assets/images/kaivera logo.png" alt="" />
+    </div>
+    <div class="nav-menu">
+      <div class="nav-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </section>
+
+  <section class="navigation">
+    <div class="navigation_container">
+    <div class="left">
+      <ul>
+        <li>
+          <div class="invert"></div>
+          <a href="home.html" class="nav-link transition-link navigation_links">HOME</a>
+        </li>
+        <li>
+          <a href="products.html" class="nav-link  transition-link navigation_links">PRODUCTS</a>
+        </li>
+        <li>
+          <a href="cart.html" class="nav-link  transition-link navigation_links">CART</a>
+        </li>
+        <li>
+          <a href="contact.html" class="nav-link  transition-link navigation_links">CONTACT</a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-link  transition-link navigation_links">ABOUT</a>
+        </li>
+        <li>
+          <a href="signup.html" class="nav-link  transition-link navigation_links">SIGNUP</a>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="bot">
+        <h1>01</h1>
+      </div>
+    </div>
+    </div>
+
+  <section class="navigation_bottom">
+   
+      <div class="icon help-target" data-help="Our Partner">
+        <a href="#"><i class="fa-brands fa-pied-piper"></i></a>
+      </div>
+      <div class="social_links help-target" data-help="Social Links">
+          <a href="#">Instagram<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">facebook<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">linkedin<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">x<i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+
+      <div class="profile">
+          <a href="#">View Profile</a>
+          <a href="#">Wish List</a>
+      </div>
+ 
+    </section>
+  </section>
+  
+
+
+  <!-- Navigation ends -->
+
+
+    <section class="signup_section">
+
+    <div class="video">
+        <video src="assets/videos/Gradientsection.mp4" autoplay muted playsinline loop></video>
+    </div>
+
+    <div class="signup_wrapper" >
+        <h1>Sign Up</h1>
+        <form action="" id="signup_form">
+            <div>
+                <label for="username_input"><i class="fa-solid fa-user"></i></label>
+                <input type="text" name="username" id="username_input" placeholder="Username">
+            </div>
+            <div>
+                <label for="email_input"><i class="fa-solid fa-envelope"></i></label>
+                <input type="email" name="email" id="email_input" placeholder="Email">
+            </div>
+            <div>
+                <label for="password_input"><i class="fa-solid fa-key"></i></label>
+                <input type="password" name="password" id="password_input" placeholder="Set Password">
+            </div>
+            <div>
+                <label for="repeat_password_input"><i class="fa-solid fa-key"></i></label>
+                <input type="passwrod" name="repeat_password" id="repeat_password_input" placeholder="Repeat Password">
+            </div>
+            <button type="submit">SignUp</button>
+        </form>
+        <div class="error_msg">
+           <p id="signup_error_message"></p>
+        </div>
+        <p>Already Have An Account ? <button id="loginBtn">Login</button></p>
+    </div>
+
+    <div class="login_wrapper">
+             <h1>Login</h1>
+        <form action="" id="login_form">
+        
+            <div>
+                <label for="login_email_input"><i class="fa-solid fa-envelope"></i></label>
+                <input type="email" name="email" id="login_email_input" placeholder="Email">
+            </div>
+            <div>
+                <label for="login_password_input"><i class="fa-solid fa-key"></i></label>
+                <input type="password" name="password" id="login_password_input" placeholder="Set Password">
+            </div>
+          
+            <button type="submit">Login</button>
+        </form>
+        <div class="error_msg">
+           <p id="login_error_message"></p>
+        </div>
+        <p>Doesn't Have An Account ? <button id="signUpBtn">SignUp</button></p>
+    </div>
+    </section>
+
+
+
+      <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+    integrity="sha512-wOeEC+9qERAzhliwBFPDb6t8TiFFxdxG8vhK/Ygs7TuC44bpg8pg/X2/U/u+0X4fK05wb9id1EIipnF02+CFQw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

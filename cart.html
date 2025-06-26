@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Kaivera Cart</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/69e1242b61.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body style="background: #121212" data-page="cart">
+
+  <!--Transition -->
+  <div class="inTransition"></div>
+  <div class="outTransition"></div>
+  <!-- Help Bubble -->
+  <div class="help-bubble"></div>
+
+  <!-- Navigation -->
+  <section class="navigation-btn">
+    <div class="nav-logo">
+      <img src="assets/images/kaivera logo.png" alt="" />
+    </div>
+    <div class="nav-menu">
+      <div class="nav-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </section>
+
+  <section class="navigation">
+    <div class="navigation_container">
+    <div class="left">
+      <ul>
+        <li>
+          <div class="invert"></div>
+          <a href="home.html" class="nav-link transition-link navigation_links">HOME</a>
+        </li>
+        <li>
+          <a href="products.html" class="nav-link  transition-link navigation_links">PRODUCTS</a>
+        </li>
+        <li>
+          <a href="cart.html" class="nav-link  transition-link navigation_links">CART</a>
+        </li>
+        <li>
+          <a href="contact.html" class="nav-link  transition-link navigation_links">CONTACT</a>
+        </li>
+        <li>
+          <a href="about.html" class="nav-link  transition-link navigation_links">ABOUT</a>
+        </li>
+        <li>
+          <a href="signup.html" class="nav-link  transition-link navigation_links">SIGNUP</a>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="bot">
+        <h1>01</h1>
+      </div>
+    </div>
+    </div>
+
+  <section class="navigation_bottom">
+   
+      <div class="icon help-target" data-help="Our Partner">
+        <a href="#"><i class="fa-brands fa-pied-piper"></i></a>
+      </div>
+      <div class="social_links help-target" data-help="Social Links">
+          <a href="#">Instagram<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">facebook<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">linkedin<i class="fa-solid fa-arrow-up"></i></a>
+          <a href="#">x<i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+
+      <div class="profile">
+          <a href="#">View Profile</a>
+          <a href="#">Wish List</a>
+      </div>
+ 
+    </section>
+  </section>
+  
+
+
+  <!-- Navigation ends -->
+
+  <!-- Header Section -->
+  <section class="header">
+    <div class="background-video">
+      <video src="assets/videos/Gradientsection.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="header-content">
+      <div class="header-links">
+        <a href="index.html" class="transition-link">Home</a>
+        <span>.</span>
+        <a href="cart.html" class="transition-link">Cart</a>
+      </div>
+      <div class="title">
+        <div class="text-wrapper">
+          <h1 class="introLineAnimation">Your Cart Elevate Your Elegance</h1>
+        </div>
+      </div>
+      <div class="desc">
+        <div class="para-wrapper">
+          <p class="introLineAnimation">
+            Secure your piece of tropical luxury with a single click. Whether
+            it’s our handcrafted sneakers, signature perfumes, or timeless
+            bags your curated style journey begins the moment you add it to
+            your cart.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section class="bg-white py-8 antialiased dark:bg-[#0d141f] md:py-16 cart-section">
+    <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+      <h2 class="text-3xl text-gray-900 dark:text-white sm:text-3xl text-center introLineAnimation cart-title">
+        Shopping Cart
+      </h2>
+
+      <div class="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
+        <div class="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
+          <div class="space-y-6">
+            <div
+              class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
+              <div class="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
+                <a href="#" class="shrink-0 md:order-1">
+                  <img class="h-20 w-20 dark:hidden"
+                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg" alt="imac image" />
+                  <img class="hidden h-20 w-20 dark:block" src="assets/products/dress11.webp" alt="imac image" />
+                </a>
+
+                <label for="counter-input" class="sr-only">Choose quantity:</label>
+                <div class="flex items-center justify-between md:order-3 md:justify-end">
+                  <div class="flex items-center">
+                    <button type="button" id="decrement-button" data-input-counter-decrement="counter-input"
+                      class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                      <svg class="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 1h16" />
+                      </svg>
+                    </button>
+                    <input type="text" id="counter-input" data-input-counter
+                      class="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white"
+                      placeholder="" value="2" required />
+                    <button type="button" id="increment-button" data-input-counter-increment="counter-input"
+                      class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                      <svg class="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 1v16M1 9h16" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="text-end md:order-4 md:w-32">
+                    <p class="text-base font-bold text-gray-900 dark:text-white">
+                      $490
+                    </p>
+                  </div>
+                </div>
+
+                <div class="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
+                  <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white">Silver
+                    Fang</a>
+
+                  <div class="flex items-center gap-4">
+                    <button type="button"
+                      class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white">
+                      <svg class="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+                      </svg>
+                      Add to Favorites
+                    </button>
+
+                    <button type="button"
+                      class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+                      <svg class="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M6 18 17.94 6M18 18 6.06 6" />
+                      </svg>
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
+              <div class="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
+                <a href="#" class="shrink-0 md:order-1">
+                  <img class="h-20 w-20 dark:hidden"
+                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/apple-watch-light.svg" alt="imac image" />
+                  <img class="hidden h-20 w-20 dark:block" src="assets/products/shirt1.webp" alt="imac image" />
+                </a>
+
+                <label for="counter-input" class="sr-only">Choose quantity:</label>
+                <div class="flex items-center justify-between md:order-3 md:justify-end">
+                  <div class="flex items-center">
+                    <button type="button" id="decrement-button-2" data-input-counter-decrement="counter-input-2"
+                      class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                      <svg class="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 1h16" />
+                      </svg>
+                    </button>
+                    <input type="text" id="counter-input-2" data-input-counter
+                      class="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white"
+                      placeholder="" value="1" required />
+                    <button type="button" id="increment-button-2" data-input-counter-increment="counter-input-2"
+                      class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                      <svg class="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 1v16M1 9h16" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="text-end md:order-4 md:w-32">
+                    <p class="text-base font-bold text-gray-900 dark:text-white">
+                      $210
+                    </p>
+                  </div>
+                </div>
+
+                <div class="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
+                  <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white">Bluish Shirt
+                    Pair</a>
+
+                  <div class="flex items-center gap-4">
+                    <button type="button"
+                      class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white">
+                      <svg class="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+                      </svg>
+                      Add to Favorites
+                    </button>
+
+                    <button type="button"
+                      class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+                      <svg class="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M6 18 17.94 6M18 18 6.06 6" />
+                      </svg>
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
+              <div class="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
+                <a href="#" class="shrink-0 md:order-1">
+                  <img class="h-20 w-20 dark:hidden"
+                    src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/macbook-pro-light.svg" alt="imac image" />
+                  <img class="hidden h-20 w-20 dark:block" src="assets/products/shoe8.webp" alt="imac image" />
+                </a>
+
+                <label for="counter-input" class="sr-only">Choose quantity:</label>
+                <div class="flex items-center justify-between md:order-3 md:justify-end">
+                  <div class="flex items-center">
+                    <button type="button" id="decrement-button-3" data-input-counter-decrement="counter-input-3"
+                      class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                      <svg class="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 1h16" />
+                      </svg>
+                    </button>
+                    <input type="text" id="counter-input-3" data-input-counter
+                      class="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white"
+                      placeholder="" value="1" required />
+                    <button type="button" id="increment-button-3" data-input-counter-increment="counter-input-3"
+                      class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                      <svg class="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 1v16M1 9h16" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="text-end md:order-4 md:w-32">
+                    <p class="text-base font-bold text-gray-900 dark:text-white">
+                      $465
+                    </p>
+                  </div>
+                </div>
+
+                <div class="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
+                  <a href="#" class="text-base font-medium text-gray-900 hover:underline dark:text-white">Black and
+                    White Pair</a>
+
+                  <div class="flex items-center gap-4">
+                    <button type="button"
+                      class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-white">
+                      <svg class="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+                      </svg>
+                      Add to Favorites
+                    </button>
+
+                    <button type="button"
+                      class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500">
+                      <svg class="me-1.5 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M6 18 17.94 6M18 18 6.06 6" />
+                      </svg>
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
+          <div
+            class="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
+            <p class="text-xl text-gray-900 dark:text-white">Order summary</p>
+
+            <div class="space-y-4">
+              <div class="space-y-2">
+                <dl class="flex items-center justify-between gap-4">
+                  <dt class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    Original price
+                  </dt>
+                  <dd class="text-base font-medium text-gray-900 dark:text-white">
+                    $7,592.00
+                  </dd>
+                </dl>
+
+                <dl class="flex items-center justify-between gap-4">
+                  <dt class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    Savings
+                  </dt>
+                  <dd class="text-base font-medium text-green-600">
+                    -$299.00
+                  </dd>
+                </dl>
+
+                <dl class="flex items-center justify-between gap-4">
+                  <dt class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    Store Pickup
+                  </dt>
+                  <dd class="text-base font-medium text-gray-900 dark:text-white">
+                    $99
+                  </dd>
+                </dl>
+
+                <dl class="flex items-center justify-between gap-4">
+                  <dt class="text-base font-normal text-gray-500 dark:text-gray-400">
+                    Tax
+                  </dt>
+                  <dd class="text-base font-medium text-gray-900 dark:text-white">
+                    $799
+                  </dd>
+                </dl>
+              </div>
+
+              <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
+                <dt class="text-base font-bold text-gray-900 dark:text-white">
+                  Total
+                </dt>
+                <dd class="text-base font-bold text-gray-900 dark:text-white">
+                  $8,191.00
+                </dd>
+              </dl>
+            </div>
+
+            <a href="#"
+              class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-white dark:hover:bg-[#e6e6e6] dark:focus:ring-primary-800">Proceed
+              to Checkout</a>
+
+            <div class="flex items-center justify-center gap-2">
+              <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                or
+              </span>
+              <a href="#" title=""
+                class="inline-flex items-center gap-2 text-base font-medium text-[#b3ffde] underline hover:no-underline dark:text-[#b3ffde]">
+                Continue Shopping
+                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 12H5m14 0-4 4m4-4-4-4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
+            <form class="space-y-4">
+              <div>
+                <label for="voucher" class="mb-2 block text-base font-medium text-gray-900 dark:text-white">
+                  Do you have a voucher or gift card?
+                </label>
+                <input type="text" id="voucher"
+                  class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                  placeholder="" required />
+              </div>
+              <button type="submit"
+                class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-base font-medium text-black hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-white dark:hover:bg-[#e6e6e6] dark:focus:ring-primary-800">
+                Apply Code
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-12 px-8 tracking-wide">
+    <div class="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-5 lg:gap-14 max-lg:gap-8">
+      <div class="lg:col-span-2 max-w-md">
+        <h4 class="text-6xl font-semibold mb-6 text-slate-800 footer-title">
+          Stay Grounded. Move Boldly
+        </h4>
+        <p class="text-slate-600 text-base">
+          Inspired by nature. Crafted for the confident. Join the Kaivera
+          journey.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-4xl font-semibold mb-6 text-slate-800 footer-title">
+          Services
+        </h4>
+        <ul class="space-y-4">
+          <li>
+            <h1 class="text-slate-600 hover:text-slate-800 text-base">
+              Clothing
+            </h1>
+          </li>
+          <li>
+            <h1 href="#" class="text-slate-600 hover:text-slate-800 text-base">
+              Delivery
+            </h1>
+          </li>
+          <li>
+            <h1 href="#" class="text-slate-600 hover:text-slate-800 text-base">
+              Luxury Design
+            </h1>
+          </li>
+          <li>
+            <h1 href="#" class="text-slate-600 hover:text-slate-800 text-base">
+              High Quality
+            </h1>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-4xl font-semibold mb-6 text-slate-800 footer-title">
+          Check Our Pages
+        </h4>
+        <ul class="space-y-4">
+          <li>
+            <a href="index.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">Home</a>
+          </li>
+          <li>
+            <a href="products.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">Products</a>
+          </li>
+          <li>
+            <a href="cart.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">Cart</a>
+          </li>
+          <li>
+            <a href="contact.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">Contact</a>
+          </li>
+          <li>
+            <a href="about.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">About</a>
+          </li>
+          <li>
+            <a href="signup.html" class="text-slate-600 hover:text-slate-800 text-base transition-link">SignUp</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-4xl font-semibold mb-6 text-slate-800 footer-title">
+          Keywords
+        </h4>
+        <ul class="space-y-4">
+          <li>
+            <a href="javascript:void(0)" class="text-slate-600 hover:text-slate-800 text-base">Branded</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-slate-600 hover:text-slate-800 text-base">Mission and Values</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-slate-600 hover:text-slate-800 text-base">Passion</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="text-slate-600 hover:text-slate-800 text-base">Sophisticated</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+    integrity="sha512-wOeEC+9qERAzhliwBFPDb6t8TiFFxdxG8vhK/Ygs7TuC44bpg8pg/X2/U/u+0X4fK05wb9id1EIipnF02+CFQw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

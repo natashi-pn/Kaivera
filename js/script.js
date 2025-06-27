@@ -1091,7 +1091,7 @@ function setUpSignup() {
   const login_form = document.getElementById('login_form');
   const username_input = document.getElementById('username_input');
   const email_input = document.getElementById('email_input');
-  const phone_input = document.getElementById('phone_input');
+
   const password_input = document.getElementById('password_input');
   const repeat_password_input = document.getElementById('repeat_password_input');
   const login_email_input = document.getElementById('login_email_input');
@@ -1108,7 +1108,7 @@ function setUpSignup() {
     let errors = [];
 
     if (username_input) {
-      errors = getSignupFormErrors(username_input.value, email_input.value, phone_input.value, password_input.value, repeat_password_input.value);
+      errors = getSignupFormErrors(username_input.value, email_input.value,  password_input.value, repeat_password_input.value);
     }
 
     if (errors.length > 0) {
@@ -1131,7 +1131,7 @@ function setUpSignup() {
   });
 
 
-  function getSignupFormErrors(username, email, phone, password, repeat_password) {
+  function getSignupFormErrors(username, email, password, repeat_password) {
     let errors = [];
 
     if (username === '' || username == null) {
@@ -1144,10 +1144,7 @@ function setUpSignup() {
       errors.push("Email is Required");
       email_input.parentElement.classList.add('incorrect');
     }
-    if (phone === '' || phone == null) {
-      errors.push("Phone is Required");
-      phone_input.parentElement.classList.add('incorrect');
-    }
+   
     if (password === '' || password == null) {
       errors.push("Password is Required");
       password_input.parentElement.classList.add('incorrect');

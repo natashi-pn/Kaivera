@@ -7,10 +7,10 @@
 }
 
 :root {
-  --black: #121315;
+  --black: #1d2025;
   --white: #dfedea;
   --tropical: #9fc9b7;
-  --black-olive: #17181b;
+  --black-olive: #1a1c20;
   --gray: #191b1b;
   --second-white: #b8c2c2;
   --bigFont: "bebas neue", sans-serif;
@@ -612,11 +612,11 @@ html,body{
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background: var(--black);
+  background: var(--black-olive);
   border-radius: 20px;
-  -webkit-box-shadow: 0px 22px 45px -40px rgb(68, 97, 101);
-  -moz-box-shadow: 0px 22px 45px -40px rgb(68, 97, 101);
-  box-shadow: 0px 22px 45px -40px rgb(68, 100, 101);
+  -webkit-box-shadow: 0px 22px 45px -50px var(--tropical);
+  -moz-box-shadow: 0px 22px 45px -30px var(--tropical);
+  box-shadow: 0px 25px 45px -50px var(--tropical);
 }
 
 .top-essence .product-container .product .product-image {
@@ -1603,11 +1603,8 @@ footer {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background: var(--black);
+  background: var(--black-olive);
   border-radius: 25px;
-  -webkit-box-shadow: 0px 22px 45px -45px rgb(68, 93, 101);
-  -moz-box-shadow: 0px 22px 45px -45px rgb(68, 97, 101);
-  box-shadow: 0px 22px 45px -45px rgb(68, 90, 101);
   margin-bottom: 30px;
   color: var(--white);
 }

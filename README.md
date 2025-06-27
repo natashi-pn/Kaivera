@@ -16,5 +16,36 @@ Some parts in home page and the whole cart page, I used tailwind components.
 The background videos, effects, images, logos, mockups, every media in this website is made from scratch using After Effect & Photoshop.
 
 This static Kaivera website will be turned into fully working dynamic website and is now being developed currently using backends PHP and AJAX.
-
 All the comments, suggestions and feedbacks are welcomed since I'm still new!! THANKIE <3
+
+
+
+
+@Additional Texts
+@Disclaimer
+The designs of this website is highly inspired by big award winning websites of the year!
+
+Inspirations
+1. monopo.london.com
+2. trionn.com
+3. solk
+
+
+@Guideline to use animations
+
+1. charsAnimation for animating texts by characters when entering the viewport
+2. LinesAnimation for animating texts by lines when entering the viewport
+3. introLineAnimation for loading new page text animations
+
+4. to use help-bubble
+add class = help-target
+data-help = "Text"
+
+5. image-parallax for image parallax on scroll
+6. background-parallax for background parallax on scroll
+
+7. fade-in for observing fade in cards
+
+8. header.css for all heading pages except home page.
+
+

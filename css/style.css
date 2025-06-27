@@ -291,7 +291,7 @@ html,body{
   left: 0;
   width: 100vw;
   height: 48vh;
-  background: var(--gray);
+  background: var(--black);
 }
 
 .loader .middle {
@@ -301,7 +301,7 @@ html,body{
   width: 100vw;
   transform: translate(-50%, -50%);
   height: 5vh;
-  background: var(--gray);
+  background: var(--black);
 }
 
 .loader .bot {
@@ -310,7 +310,7 @@ html,body{
   left: 0;
   width: 100vw;
   height: 48vh;
-  background: var(--gray);
+  background: var(--black);
 }
 
 .loader .textLoader {
@@ -328,8 +328,7 @@ html,body{
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
   text-align: center;
   font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -1px;
+  font-weight: 600;
   font-family: var(--smallFont);
 }
 

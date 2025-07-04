@@ -134,10 +134,8 @@ function setUpHome() {
         duration: 1.3,
         ease: "power4.inOut",
         delay: 2.5,
-      })
-        function preventScroll(e) {
-            e.preventDefault();
-          }
+      });
+     
       gsap.to(".loader .loader_bg_bottom", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
         duration: 1.3,
@@ -150,13 +148,14 @@ function setUpHome() {
         
 
           document.querySelector(".loader").style.display = "none";
+          
           document.body.style.overflow = "";
           document.documentElement.style.overflow = "";
           document.body.removeEventListener("touchmove", preventScroll);
           document.removeEventListener("wheel", preventScroll);
           lenis.start();
           requestAnimationFrame(raf);
-        }
+        },
       });
 
       gsap.to(".loader", {

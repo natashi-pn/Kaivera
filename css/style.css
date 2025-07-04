@@ -303,7 +303,7 @@ html,body{
   font-size: 1rem;
   font-family: var(--smallFont);
   color: var(--second-white);
-  line-height: .8;
+  line-height: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   
   

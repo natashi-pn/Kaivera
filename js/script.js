@@ -39,6 +39,7 @@ function setUpHome() {
 
   document.fonts.ready.then(() => {
     if (showLoader) {
+
       // Disabling scrolling in all platform
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
@@ -51,89 +52,124 @@ function setUpHome() {
       function preventScroll(e) {
         e.preventDefault();
       }
-
       sessionStorage.setItem("kaiveraVisited", "true");
 
-      // Loader animation
+      // Loading Animation
 
-      const loaderText = document.querySelectorAll(".loader .textLoader h1");
-      const loaderSplit = [];
 
-      loaderText.forEach((el) => {
-        const split = new SplitText(el, { type: "chars" });
-        loaderSplit.push(split);
-      });
+      document.querySelector(".loader").style.display ="block"
 
-      loaderSplit.forEach((split) => {
-        gsap.from(split.chars, {
-          y: 300,
-          duration: 2.5,
-          stagger: 0.1,
-          ease: "power4.inOut",
-          delay: 1,
-        });
-        gsap.to(split.chars, {
-          opacity: 0,
-          duration: 1,
-          stagger: 0.1,
-          ease: "power4.in",
-          delay: 4.5,
-        });
-      });
 
-      gsap.to(".loader .textLoader .second", {
-        scale: 0.5,
-        duration: 1,
-        ease: "power3.inOut",
-        delay: 3.5,
-        x: 30,
-      });
-      gsap.to(".loader .textLoader .first", {
-        scale: 1.5,
-        duration: 1,
-        ease: "power3.inOut",
-        delay: 3.5,
-        x: -30,
-      });
-      gsap.to(".loader .middle", {
-        duration: 1,
-        xPercent: 100,
-        ease: "power4.in",
-        delay: 3.5,
-      });
-      gsap.to(".loader .top", {
-        duration: 1,
-        yPercent: -100,
-        ease: "power4.in",
-        delay: 5,
-      });
-      function preventScroll(e) {
-        e.preventDefault();
+      let counterElement = document.querySelector(".loader .counter p");
+      let currentValue = 0;
+
+
+      function updateCounter() {
+        if (currentValue < 100) {
+          let increment = Math.floor(Math.random() * 10) + 1;
+          currentValue = Math.min(currentValue + increment, 100);
+          counterElement.textContent = currentValue;
+
+          let delay = Math.floor(Math.random() * 200) + 25;
+          setTimeout(updateCounter, delay);
+        }
       }
-      gsap.to(".loader .bot", {
+
+
+      const loader_bg = document.querySelectorAll(".loader .loader_bg");
+      const loading_text = document.querySelectorAll(".loader .text_content h1");
+      const arr_text = [];
+
+
+      loading_text.forEach((el) => {
+        const split = new SplitText(el, {
+          type: "chars"
+        });
+        arr_text.push(split);
+      });
+
+      arr_text.forEach((split) => {
+        gsap.from(split.chars, {
+          y: -100,
+          duration: 1,
+          stagger: 0.03,
+          ease: "power4.out"
+        })
+        gsap.to(split.chars, {
+          y: 100,
+          duration: 1,
+          stagger: 0.02,
+          ease: "power4.in",
+          delay: 2.5
+        })
+      });
+
+      gsap.from(counterElement, {
+        opacity: 0,
+        y: -20,
         duration: 1,
-        yPercent: 100,
+        ease: "power4.out"
+      })
+      gsap.to(counterElement, {
+        opacity: 0,
+        y: 30,
+        duration: 1,
         ease: "power4.in",
-        delay: 5,
+        delay: 2.5
+      })
+
+
+      gsap.set(".loader .loader_bg_top , .loader .loader_bg_bottom ", {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+      });
+      gsap.to(loader_bg, {
+        scale: 0.4,
+        duration: 1.5,
+        ease: "power4.inOut",
+        delay: 2
+      });
+
+      gsap.to(".loader .loader_bg_top", {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        duration: 1.3,
+        ease: "power4.inOut",
+        delay: 2.5,
+      })
+      gsap.to(".loader .loader_bg_bottom", {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+        duration: 1.3,
+        ease: "power4.inOut",
+        delay: 2.8,
         //When the page loading complete
         onComplete: () => {
-          document.querySelector(".loader .bot").style.display = "none";
-          // Re-enabling scrolling in all platforms
+
+
+          function preventScroll(e) {
+            e.preventDefault();
+          }
+
+          document.querySelector(".loader").style.display = "none";
           document.body.style.overflow = "";
           document.documentElement.style.overflow = "";
           document.body.removeEventListener("touchmove", preventScroll);
           document.removeEventListener("wheel", preventScroll);
           lenis.start();
           requestAnimationFrame(raf);
-        },
+        }
       });
+
       gsap.to(".loader", {
         delay: 6,
         onComplete: () => {
           document.querySelector(".loader").style.display = "none";
         },
       });
-      startMainAnimation(4.5);
+
+      updateCounter();
+
+      startMainAnimation(2.2);
+
+
     } else {
       document.querySelector(".loader").style.display = "none";
       lenis.start();
@@ -142,6 +178,7 @@ function setUpHome() {
     }
 
     function startMainAnimation(delay = 0) {
+
       requestAnimationFrame(raf);
       //Landing page animation
 

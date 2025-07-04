@@ -135,6 +135,9 @@ function setUpHome() {
         ease: "power4.inOut",
         delay: 2.5,
       })
+        function preventScroll(e) {
+            e.preventDefault();
+          }
       gsap.to(".loader .loader_bg_bottom", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
         duration: 1.3,
@@ -144,9 +147,7 @@ function setUpHome() {
         onComplete: () => {
 
 
-          function preventScroll(e) {
-            e.preventDefault();
-          }
+        
 
           document.querySelector(".loader").style.display = "none";
           document.body.style.overflow = "";

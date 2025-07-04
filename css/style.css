@@ -275,61 +275,57 @@ html,body{
 
 
 
+/* Loader */
+
 .loader {
-  position: absolute;
-  z-index: 999;
+  display: none;
+  position: fixed;
+  z-index: 99999;
   pointer-events: none;
   width: 100vw;
   height: 100vh;
+  will-change: display;
+}
+.loader .text_content{
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1000001;
   display: flex;
-  flex-direction: column;
+  width:180px;
+  align-items: flex-start;
+  justify-content: space-between;
+
 }
 
-.loader .top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 48vh;
-  background: var(--black);
-}
-
-.loader .middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
-  transform: translate(-50%, -50%);
-  height: 5vh;
-  background: var(--black);
-}
-
-.loader .bot {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 48vh;
-  background: var(--black);
-}
-
-.loader .textLoader {
-  z-index: 999;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  line-height: 0.8;
-  font-size: 2rem;
-}
-
-.loader .textLoader h1 {
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600;
+.loader .counter p{
+  font-size: 1rem;
   font-family: var(--smallFont);
+  color: var(--second-white);
+  line-height: .8;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  
+  
+}
+.loader .text_content h1{
+  font-size: 3rem;
+  font-family: var(--bigFont);
+  color: var(--white);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  line-height: 1;
+}
+.loader .loader_bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  will-change: transform , clip-path;
+
+}
+.loader .loader_bg_top{
+  background: var(--black-olive);
+  z-index: 1000000;
 }
 
 /* Landing Page */

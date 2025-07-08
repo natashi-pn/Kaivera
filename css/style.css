@@ -121,7 +121,7 @@ html,body{
   height: 100vh;
   width: 100vw;
   padding: 3rem;
-  background: #98f0aa;
+  background: var(--black);
 }
 
 .navigation_bottom {
@@ -144,12 +144,14 @@ html,body{
 
 .navigation_bottom .icon {
   font-size: 5rem;
-  color: black;
+  color: var(--second-white);
   font-weight: 300;
   text-align: center;
 }
-.navigation_bottom .icon i{
-  color: black;
+
+.navigation_bottom .icon i {
+  color: var(--second-white);
+
 }
 
 .navigation_bottom .social_links {
@@ -161,31 +163,37 @@ html,body{
   font-size: .9rem;
 
 }
-.navigation_bottom .social_links a{
-      transition: .1s linear;
-      text-decoration: none;
-      color: black;
+
+.navigation_bottom .social_links a {
+  transition: .1s linear;
+  text-decoration: none;
+  color: var(--second-white);
+
 }
+
 .navigation_bottom .social_links a i {
   margin: 0 5px;
   transform: rotate(45deg);
   font-size: .9rem;
 
 }
-.navigation_bottom .social_links a:hover{
+
+.navigation_bottom .social_links a:hover {
   transform: scale(1.1);
 }
 
 .navigation_bottom .profile a {
   margin: 0 20px;
-  color: var(--black);
+  color: var(--second-white);
+
   font-size: .9rem;
   font-family: var(--smallFont);
   transition: .1s linear;
-     text-decoration: none;
+  text-decoration: none;
 
 }
-.navigation_bottom .profile a:hover{
+
+.navigation_bottom .profile a:hover {
   text-decoration: underline;
 }
 
@@ -211,21 +219,22 @@ html,body{
 
 
 }
-.navigation .left ul li::before{
+
+.navigation .left ul li::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 100%;
-  background: var(--black);
+  background: var(--second-white);
   height: 0%;
   z-index: -1;
   transition: .2s linear;
 }
 
 .navigation .left ul li a {
-  color: black;
+  color: var(--white);
   text-decoration: none;
   font-size: 3rem;
   z-index: 0;
@@ -240,13 +249,14 @@ html,body{
   display: inline-block;
 }
 
-  .navigation .left ul li:hover::before {
+.navigation .left ul li:hover::before {
   height: 100%;
 
 }
-  .navigation .left ul li:hover > a {
-    color: white;
-  }
+
+.navigation .left ul li:hover>a {
+  color: var(--black);
+}
 
 .navigation .right {
   width: 100%;
@@ -265,13 +275,14 @@ html,body{
 }
 
 .navigation .right .bot h1 {
-  color: var(--black);
+  color: var(--white);
   font-size: 18rem;
   font-weight: 500;
   font-family: var(--bigFont);
   text-align: left;
 
 }
+
 
 
 

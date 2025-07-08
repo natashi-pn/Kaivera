@@ -345,8 +345,7 @@ function setUpHome() {
   updateCarousel();
   startAutoSlide();
 }
-
-function setUpAbout() {
+function aboutAnimation() {
   let linesScrollAnimationSplit = [];
   const linesScrollAnimation = document.querySelectorAll(".scrollLine");
 
@@ -397,6 +396,48 @@ function setUpAbout() {
     });
   });
 
+  const scrollText = document.querySelectorAll(".scrollText");
+
+  document.fonts.ready.then(() => {
+    const scrollTextSplit = new SplitText(scrollText, {
+      type: "lines",
+      linesClass: "lineChildren",
+    });
+
+    const scrollTextChars = new SplitText(scrollText, {
+      type: "chars",
+      charsClass: "charChildren",
+    });
+
+    gsap.from(scrollTextSplit.lines, {
+      x: -200,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: scrollText,
+        start: "-200px 80%",
+        end: "bottom 60%",
+        scrub: true,
+
+      },
+    });
+    gsap.from(scrollTextChars.chars, {
+      opacity: 0.1,
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: scrollText,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+    });
+  });
+
+}
+
+function setUpAbout() {
+  aboutAnimation();
+
+
   const about_video = document.querySelector(".about-video video");
   gsap.set(about_video, {
     borderRadius: "50px",
@@ -420,41 +461,7 @@ function setUpAbout() {
     },
   });
 
-  const scrollText = document.querySelectorAll(".scrollText");
 
-  document.fonts.ready.then(() => {
-    const scrollTextSplit = new SplitText(scrollText, {
-      type: "lines",
-      linesClass: "lineChildren",
-    });
-
-    const scrollTextChars = new SplitText(scrollText, {
-      type: "chars",
-      charsClass: "charChildren",
-    });
-
-    gsap.from(scrollTextSplit.lines, {
-      x: -200,
-      stagger: 0.3,
-      scrollTrigger: {
-        trigger: scrollText,
-        start: "-200px 80%",
-        end: "bottom 60%",
-        scrub: true,
-        // markers:true
-      },
-    });
-    gsap.from(scrollTextChars.chars, {
-      opacity: 0.1,
-      stagger: 0.05,
-      scrollTrigger: {
-        trigger: scrollText,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-      },
-    });
-  });
 
   const animateImage = document.querySelector(".animateImage1");
   gsap.from(animateImage, {
@@ -1256,10 +1263,12 @@ function initGlobal() {
   setUpLoader();
 }
 function initHome() {
-
+  
   setUpHome();
   setUpParallax();
   setUpSliderImage();
+    aboutAnimation();
+
 }
 
 function initProduct() {

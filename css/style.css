@@ -49,6 +49,11 @@ html,body{
   background: transparent;
 }
 
+button:active,
+a:active {
+  transform: scale(0.93);
+}
+
 .navigation-btn {
   position: fixed;
   top: 0;
@@ -936,55 +941,6 @@ footer {
 @media (max-width: 1055px) {
 
 
-  /* .navigation .left {
-    height: 50%;
-    margin-top: 80px;
-  }
-
-  .navigation .right {
-    padding: 0 30px;
-    height: 50%;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-
-  .navigation .left ul li a {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 0;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-  }
-
-  .navigation .left ul li {
-    height: 38px;
-    text-align: center;
-  }
-
-  .navigation .right .bot h1 {
-    text-align: center;
-    font-size: 8rem;
-    margin-bottom: 0;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-  }
-
-  .navigation .right .top {
-    width: 100%;
-    text-align: center;
-    place-content: center;
-    place-items: center;
-  }
-
-  .navigation .right .top p {
-    width: 50%;
-     place-content: center;
-  place-self: center;
-    text-align: center;
-    font-size: 0.8rem;
-    margin-bottom: 50px;
-
-  } */
-
   .about-us .container .wrapper {
     width: 100%;
     padding: 10px;
@@ -1220,7 +1176,7 @@ footer {
   }
 
   .testimonial .testimonial-image .image {
-    background-size: 100%;
+    background-size: 200%;
   }
 
   .testimonial-title {

@@ -514,24 +514,47 @@ html,body{
 
 .horizontalText {
   position: relative;
-  height: 80px;
   overflow-x: hidden;
   padding: 5px 0;
-  background: var(--black-olive);
   cursor: pointer;
+  height: 50vh;
 }
 
 .horizontalText p {
   width: 1500vw;
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: -40%;
-  transform: translate(-30%, -50%);
-  font-size: 1rem;
-  text-transform: uppercase;
+  color: var(--white);
+  font-size: 10rem;
+  text-transform: capitalize;
   letter-spacing: 2px;
+  font-family: var(--smallFont);
+  position: relative;
+  left: -500px;
+  transition: .2s linear;
+
 }
+
+.horizontalText p::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background: var(--white);
+  height: 0%;
+  z-index: -1;
+  transition: .2s linear;
+}
+
+.horizontalText p:hover {
+  color: var(--black);
+}
+
+.horizontalText p:hover::before {
+  height: 100%;
+
+}
+
 
 /* Help Bubble CSS */
 .help-bubble {
@@ -2769,4 +2792,46 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
 
+}
+
+/* View Transitions */
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 1.3s cubic-bezier(.87, .08, .25, .96) both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 1.3s cubic-bezier(.87, .08, .25, .96) both move-in;
+}
+
+@keyframes move-out {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+
+  }
+
+  to {
+    transform: translateY(-20%);
+    opacity: .5;
+
+  }
+}
+
+@keyframes move-in {
+  from {
+    transform: translateY(30%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    scale: 1.2;
+  }
+
+  to {
+    transform: translateY(0%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    scale: 1;
+  }
 }

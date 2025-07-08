@@ -1070,46 +1070,6 @@ function setUpSliderImage() {
   });
 }
 
-function setUpTransition() {
-  // Page Transition
-  const links = document.querySelectorAll(".transition-link");
-
-  gsap.to(".inTransition", {
-    yPercent: -100,
-    duration: 0.8,
-    delay: 0.5,
-    ease: "power4.inOut",
-    onComplete: () => {
-      document.querySelector(".inTransition").style.display = "none";
-    },
-  });
-
-  gsap.set(".outTransition", {
-    height: 0,
-    width: 800,
-  });
-  links.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetUrl = link.getAttribute("href");
-
-      // Out transition
-      gsap.to(".outTransition", {
-        y: -550,
-        height: 800,
-        width: 1535,
-        duration: 1.3,
-        ease: "power4.inOut",
-        onStart: () => {
-          overlay.style.pointerEvents = "auto";
-        },
-        onComplete: () => {
-          window.location.href = targetUrl;
-        },
-      });
-    });
-  });
-}
 
 function setUpSignup() {
 
@@ -1290,7 +1250,6 @@ function setUpSignup() {
 
 function initGlobal() {
 
-  setUpTransition();
   setUpHelpBubble();
   setUpNavigation();
   setUpScrollToTop();

@@ -55,7 +55,14 @@ function setUpHome() {
       sessionStorage.setItem("kaiveraVisited", "true");
 
       // Loading Animation
-
+            gsap.to(".inTransition", {
+        yPercent: -100,
+        duration: .8,
+        ease: "power4.inOut",
+        onComplete: () => {
+          document.querySelector(".inTransition").style.display = "none";
+        },
+      });
 
       document.querySelector(".loader").style.display ="block"
 

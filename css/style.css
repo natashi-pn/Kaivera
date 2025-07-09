@@ -102,6 +102,9 @@ a:active {
   justify-content: center;
   align-items: center;
 }
+.nav-menu .nav-btn:active {
+  transform: scale(0.93);
+}
 
 .nav-btn i {
   color: rgb(106, 106, 106);

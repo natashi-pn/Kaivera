@@ -295,7 +295,6 @@ a:active {
 /* Loader */
 
 .loader {
-  display: none;
   position: fixed;
   z-index: 99999;
   pointer-events: none;

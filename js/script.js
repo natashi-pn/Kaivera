@@ -173,6 +173,7 @@ function setUpHome() {
 
 
     } else {
+      document.querySelector(".inTransition").style.display = "none";
       document.querySelector(".loader").style.display = "none";
       lenis.start();
       requestAnimationFrame(raf);

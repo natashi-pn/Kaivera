@@ -55,17 +55,6 @@ function setUpHome() {
       sessionStorage.setItem("kaiveraVisited", "true");
 
       // Loading Animation
-            gsap.to(".inTransition", {
-        yPercent: -100,
-        duration: .8,
-        ease: "power4.inOut",
-        onComplete: () => {
-          document.querySelector(".inTransition").style.display = "none";
-        },
-      });
-
-      document.querySelector(".loader").style.display ="block"
-
 
       let counterElement = document.querySelector(".loader .counter p");
       let currentValue = 0;
@@ -173,7 +162,6 @@ function setUpHome() {
 
 
     } else {
-      document.querySelector(".inTransition").style.display = "none";
       document.querySelector(".loader").style.display = "none";
       lenis.start();
       requestAnimationFrame(raf);

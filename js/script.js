@@ -70,20 +70,19 @@ function setUpHome() {
           currentValue = Math.min(currentValue + increment, 100);
           counterElement.textContent = currentValue;
 
-          let delay = Math.floor(Math.random() * 200) + 25;
+          let delay = Math.floor(Math.random() * 150) + 25;
           setTimeout(updateCounter, delay);
         }
       }
 
 
-      const loader_bg = document.querySelectorAll(".loader .loader_bg");
+       const loader_bg = document.querySelectorAll(".loader .loader_bg");
       const loading_text = document.querySelectorAll(".loader .text_content h1");
       const arr_text = [];
 
-
       loading_text.forEach((el) => {
         const split = new SplitText(el, {
-          type: "chars"
+          tupe: "chars"
         });
         arr_text.push(split);
       });
@@ -91,12 +90,14 @@ function setUpHome() {
       arr_text.forEach((split) => {
         gsap.from(split.chars, {
           y: -100,
-          duration: 1,
+          duration: 1.2,
           stagger: 0.03,
-          ease: "power4.out"
-        })
+          ease: "power4.out",
+          delay: .4
+        });
+
         gsap.to(split.chars, {
-          y: 100,
+          y: 50,
           duration: 1,
           stagger: 0.02,
           ease: "power4.in",
@@ -107,9 +108,10 @@ function setUpHome() {
       gsap.from(counterElement, {
         opacity: 0,
         y: -20,
-        duration: 1,
-        ease: "power4.out"
-      })
+        duration: 1.2,
+        ease: "power4.out",
+        delay: .4,
+      });
       gsap.to(counterElement, {
         opacity: 0,
         y: 30,
@@ -118,46 +120,39 @@ function setUpHome() {
         delay: 2.5
       })
 
-
-      gsap.set(".loader .loader_bg_top , .loader .loader_bg_bottom ", {
+      gsap.set(".loader .loader_bg_top, .loader .loader_bg_bottom", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
       });
       gsap.to(loader_bg, {
-        scale: 0.4,
+        scale: 0.5,
         duration: 1.5,
         ease: "power4.inOut",
-        delay: 2
+        delay: 2.5,
       });
-
       gsap.to(".loader .loader_bg_top", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
         duration: 1.3,
         ease: "power4.inOut",
-        delay: 2.5,
+        delay: 3
+
       });
-     
       gsap.to(".loader .loader_bg_bottom", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
         duration: 1.3,
         ease: "power4.inOut",
-        delay: 2.8,
-        //When the page loading complete
+        delay: 3.4,
+
         onComplete: () => {
-
-
-        
-
-          document.querySelector(".loader").style.display = "none";
-          
+          document.querySelector('.loader').style.display = "none";
           document.body.style.overflow = "";
           document.documentElement.style.overflow = "";
           document.body.removeEventListener("touchmove", preventScroll);
           document.removeEventListener("wheel", preventScroll);
           lenis.start();
           requestAnimationFrame(raf);
+
         },
       });
-
       gsap.to(".loader", {
         delay: 6,
         onComplete: () => {
@@ -167,7 +162,7 @@ function setUpHome() {
 
       updateCounter();
 
-      startMainAnimation(2.2);
+      startMainAnimation(2.5);
 
 
     } else {
@@ -762,7 +757,6 @@ function setUpNavigation() {
   let isOpen = false;
 
   gsap.set(navigation, {
-    yPercent: -100,
     clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)"
 
   })
@@ -774,11 +768,10 @@ function setUpNavigation() {
   navBtn.addEventListener("click", () => {
     if (!isOpen) {
 
-      gsap.to(navigation, {
-        yPercent: -50,
-        duration: 2,
+       gsap.to(navigation, {
+        y: "0%",
+        duration: 1.3,
         ease: "power4.out",
-
 
       })
       gsap.to(navigation, {
@@ -799,11 +792,12 @@ function setUpNavigation() {
 
     } else {
       gsap.to(navigation, {
-        yPercent: -100,
-        duration: 2,
+        y: "-100%",
+        duration: 1.5,
         ease: "power4.inOut",
 
       })
+
 
       gsap.to(navigation, {
         duration: 2,
